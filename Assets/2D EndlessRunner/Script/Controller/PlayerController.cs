@@ -86,12 +86,7 @@ namespace EndlessRunner.Controller
 
         public void ResetGame()
         {
-            isGrounded = true;
-            rb.velocity = Vector2.zero;
-            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            gameOverPanel.SetActive(false);
-            userGuide.SetActive(false);
         }
     }
 }
