@@ -23,7 +23,7 @@ namespace EndlessRunner.Manager
         private float CloudTransformMaxY;
         public float minSpawnDelay = 1f;
         public float maxSpawnDelay = 3f;
-        public float cloudSpawnInterval = 10; // Time between cloud spawns
+        public float cloudSpawnInterval = 10; 
 
         private float nextCloudSpawnTime;
 
@@ -35,7 +35,6 @@ namespace EndlessRunner.Manager
 
         void Update()
         {
-            // Handle cloud spawning in Update
             if (Time.time >= nextCloudSpawnTime)
             {
                 SpawnCloud();
@@ -79,7 +78,6 @@ namespace EndlessRunner.Manager
                 Instantiate(obstacle, spawnPosition, Quaternion.identity);
             }
 
-            // Schedule only the next obstacle spawn
             ScheduleNextObstacleSpawn();
         }
 
@@ -95,7 +93,6 @@ namespace EndlessRunner.Manager
                 );
                 Instantiate(cloud[CloudType], spawnPosition, Quaternion.identity);
             }
-            // No need to call ScheduleNextSpawn here
         }
     }
 }

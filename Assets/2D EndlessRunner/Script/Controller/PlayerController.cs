@@ -37,13 +37,10 @@ namespace EndlessRunner.Controller
             {
                 anim.Play("Player");
             }
-            // Check for keyboard input (Space key)
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 Jump();
             }
-
-            // Check for touch input
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
@@ -79,7 +76,6 @@ namespace EndlessRunner.Controller
 
         private void GameOver()
         {
-            Debug.Log("Game Over!");
             gameOverPanel.SetActive(true);
             Time.timeScale = 0;
         }
